@@ -1,4 +1,10 @@
-// components/Projects.js
+/*
+ * File Name: Projects.js
+ * Student's Name: Aytekin Akbulut
+ * Student ID: 301121426
+ * Date: October 1, 2024
+ */
+
 import React from 'react';
 
 function Projects() {
