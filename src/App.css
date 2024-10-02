@@ -1,4 +1,9 @@
-/* App.css */
+/*
+ * File Name: App.css
+ * Student's Name: Aytekin Akbulut
+ * Student ID: 301121426
+ * Date: October 1, 2024
+ */
 
 /* Global styles */
 body {
@@ -53,6 +58,50 @@ a {
   align-items: center;
   padding: 2rem;
   background-color: #e0e0e0; /* Light background */
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.5rem;
+  background-color: #e0e0e0; /* Light background */
+}
+
+.contact form {
+  border-radius: 15px;
+  background: rgb(239, 234, 234);
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem;
+}
+
+.entry {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+
+.entry input, textarea {
+  width: 300px; /* Adjust width */
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 0.5rem;
+}
+
+.entry button {
+  width: 300px; /* Adjust width */
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 0.5rem;
+  font-size: medium;
 }
 
 .projects-page {

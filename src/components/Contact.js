@@ -1,5 +1,12 @@
-// components/Contact.js
+/*
+ * File Name: Contact.js
+ * Student's Name: Aytekin Akbulut
+ * Student ID: 301121426
+ * Date: October 1, 2024
+ */
+
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -10,6 +17,8 @@ function Contact() {
     message: '',
   });
 
+  const navigate = useNavigate();
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
@@ -18,29 +27,37 @@ function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
     alert('Message sent successfully!');
-    // Redirect to home or handle the data submission
+    navigate("/")
   };
 
   return (
     <div className="contact">
       <h1>Contact Me</h1>
+      <p><i><span>Phone: +1 999 999 9999</span> <span>Email: akbuluta6161@gmail.com</span></i></p>
       <form onSubmit={handleSubmit}>
-        <label>First Name:</label>
-        <input type="text" name="firstName" value={formData.firstName} onChange={handleChange} required />
-        
-        <label>Last Name:</label>
-        <input type="text" name="lastName" value={formData.lastName} onChange={handleChange} required />
-        
-        <label>Contact Number:</label>
-        <input type="text" name="contactNumber" value={formData.contactNumber} onChange={handleChange} required />
-        
-        <label>Email:</label>
-        <input type="email" name="email" value={formData.email} onChange={handleChange} required />
-        
-        <label>Message:</label>
-        <textarea name="message" value={formData.message} onChange={handleChange} required />
-        
-        <button type="submit">Submit</button>
+        <div className="entry">
+          <label>First Name:</label>
+          <input type="text" name="firstName" value={formData.firstName} onChange={handleChange} required />
+        </div>
+        <div className="entry">
+          <label>Last Name:</label>
+          <input type="text" name="lastName" value={formData.lastName} onChange={handleChange} required />  
+        </div>
+        <div className="entry">
+          <label>Contact Number:</label>
+          <input type="text" name="contactNumber" value={formData.contactNumber} onChange={handleChange} required />  
+        </div>
+        <div className="entry">
+          <label>Email:</label>
+          <input type="email" name="email" value={formData.email} onChange={handleChange} required />  
+        </div>
+        <div className="entry">
+          <label>Message:</label>
+          <textarea name="message" value={formData.message} onChange={handleChange} required />  
+        </div>
+        <div className="entry">
+          <button type="submit">Submit</button>  
+        </div>
       </form>
     </div>
   );
